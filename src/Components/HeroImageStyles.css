@@ -1,0 +1,95 @@
+.hero {
+    height: 100%;
+    width: 100%;
+}
+
+.mask {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero .content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.hero .content .subheading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade .3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.hero .content .heading {
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.hero .content .heading .wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hero .content .heading .wrapper span {
+    position: relative;
+    bottom: -70px;
+    animation: reveal 1s ease-in-out forwards;
+}
+
+@keyframes reveal {
+    0% {
+        bottom: -70px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero .content .buttons {
+    opacity: 0;
+    animation: fade .3s ease-in forwards;
+    animation-delay: 1s;
+    margin-top: 2.5rem;
+}
+
+.hero .content .buttons .btn {
+    margin: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .hero .content .subheading {
+        font-size: 1.4rem;
+    }
+
+    .hero .content .heading {
+        font-size: 3rem;
+    }
+
+}
